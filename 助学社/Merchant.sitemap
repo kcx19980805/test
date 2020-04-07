@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="" title=""  description="">
+		<siteMapNode url="~/NewFolder1/soft.aspx" title="首页"  description="" />
+		<siteMapNode url="~/NewFolder1/wulian.aspx" title="职位管理"  description="" />
+		<siteMapNode url="" title="简历管理"  description="" />
+		<siteMapNode url="" title="资金管理"  description="" />		
+	</siteMapNode>
+</siteMap>
+

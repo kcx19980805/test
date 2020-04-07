@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MerchantInterface.master.cs" Inherits="助学社.MerchantInterface" %>
+
+<!DOCTYPE html>
+<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    *{border:0;padding:0;margin:0;list-style:none; }
+    .head{width:100%;height:52px;margin-top:20px;}
+    .contain{width:100%;height:800px;background-color:#f3f2f2;}
+    .footer{width:100%;height:200px;background-image:url("Images/footer.jpg")}
+    .logo{width:178px;height:52px; background-image:url("Images/logo.jpg");margin-left:200px;float:left;}
+    .nav{width:550px;height:52px;float:left;margin-right:250px;}
+    .person{width:200px;height:52px;float:left; position:relative;}
+    .img{width: 51px; height: 44px;float:left;background-image:url("Images/默认头像.jpg")}
+    .text-p{width: 100px; height: 44px;float:left;}
+    .radio{width:49px;height: 44px;float: left;}
+    .radio span{width: 15px;height: 15px;background-image:url("Images/arrow_right.png");display:inline-block;position:relative;left: 15px;top:10px; transition: 0.3s;background-repeat:no-repeat;}
+    .current{transform: rotate(90deg);}
+    .person-ajax{width:150px; height:230px;position:absolute;z-index:5;right:30%;top:8%;display:none}
+    .person-img1,.person-img2,.person-img3,.person-img4,.person-img5{float:left; width:25px;height:25px;}
+    .person-text{height:25px;width:100px;float:left; line-height:25px;}
+    .btn-div {width: 128px;height: 25px;}
+    .btn-txt { height: 25px;width: 101px; float: left;line-height: 25px;padding-left:2px;font-size:14px;background-color:transparent;}
+    .person-img1{background-image:url("Images/基本信息.png")}
+    .person-img2{background-image:url("Images/我的公司.png")}
+    .person-img3{background-image:url("Images/修改密码.png")}
+    .person-img4{background-image:url("Images/修改手机号.png")}
+    .person-img5{background-image:url("Images/退出.png")}
+</style>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="head">
+                <div class="logo"></div>
+                <div class="nav">
+                   <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Font-Overline="False" ForeColor="Black" Orientation="Horizontal" StaticDisplayLevels="2" Height="52px" Width="500px">
+                       <LevelMenuItemStyles>
+                           <asp:MenuItemStyle Font-Underline="False" />
+                           <asp:MenuItemStyle Font-Underline="False" HorizontalPadding="20px" VerticalPadding="10px" />
+                       </LevelMenuItemStyles>
+                    </asp:Menu>
+                   <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" SiteMapProvider="Merchant" />
+                </div>
+                <div class="person">
+                    <div class="img"></div>
+                    <div class="text-p">
+                        <asp:Label ID="Label1" runat="server" Text="Label">康晨曦</asp:Label><br />
+                        <asp:Label ID="Label2" runat="server" Text="Label">未绑定公司</asp:Label>
+                    </div>
+                    <div class="radio">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="contain">
+                <div class="person-ajax">
+                   <div class="list-group">
+	                 <button type="button" class="list-group-item" runat="server">
+                         <div class="btn-div">
+                            <div class="person-img1"></div>
+                            <asp:Button ID="Button1" runat="server" Text="基本信息"  CssClass="btn-txt"/>
+                         </div>
+	                 </button>
+	                 <button type="button" class="list-group-item" runat="server">
+                         <div class="btn-div">
+                            <div class="person-img2"></div>
+                            <asp:Button ID="Button2" runat="server" Text="我的公司"  CssClass="btn-txt"/>
+                         </div>
+                     </button>
+	                 <button type="button" class="list-group-item" runat="server">
+                         <div class="btn-div">
+                            <div class="person-img3"></div>
+                            <asp:Button ID="Button3" runat="server" Text="修改密码"  CssClass="btn-txt"/>
+                         </div>
+	                 </button>
+	                 <button type="button" class="list-group-item" runat="server">
+                         <div class="btn-div">
+                            <div class="person-img4"></div>
+                            <asp:Button ID="Button4" runat="server" Text="修改手机号"  CssClass="btn-txt"/>
+                         </div>
+	                 </button>
+	                 <button type="button" class="list-group-item" runat="server"  onclick="">
+                         <div class="btn-div">
+                            <div class="person-img5"></div>
+                            <asp:Button ID="Button5" runat="server" Text="退出"  CssClass="btn-txt" OnClick="Button5_Click"/>
+                         </div>                         
+                     </button>
+	               </div>
+                </div>
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               </asp:ContentPlaceHolder>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </form>
+   <script src="bootstrap-3.3.7-dist/js/jquery-3.4.1.min.js"></script>
+    <script>
+        console.log($(".person"));
+        $(function () {
+            $(".person").click(function () {
+                $(".person-ajax").slideToggle();
+                $(".radio span").toggleClass("current");
+            })
+        })
+    </script>
+</body>
+</html>

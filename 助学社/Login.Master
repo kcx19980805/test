@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="助学社.Login" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        *{margin:0;padding:0;border:none;}
+        .auto-style1 {height: 506px;background-color: bisque;background-image: url('Images/登录.jpg');background-position: center center;min-width: 900px;width: 1897px;}
+        /*---------------------------第二层--------------------------------*/
+        .div1{width:240px;height:250px;box-shadow:1px 1px 10px #d4d1d1;float:left;margin-left:20px;}
+        .image1, .image2, .image3, .image4 {
+            width: 180px;
+            height: 100px;
+            background-size: 200px 100px;
+            background-repeat: no-repeat;
+            margin: 0 0 0 30px;
+        }
+        .image1 { background-image: url('Images/login-2.jpg');}
+        .image2 { background-image: url('Images/login-3.jpg');}
+        .image3 { background-image: url('Images/login-4.jpg');}
+        .image4 { background-image: url('Images/login-5.jpg');}
+        .p1 {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 25px;
+            color: #545252;
+        }
+
+        .p2 {
+            text-align: center;
+            font-size: 13px;
+            margin-top: 10px;
+            padding: 0 20px 0 20px;
+        }
+        .big {
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .div1_1 {
+            margin-top: 55px;
+            transition: 0.5s;
+        }
+        .div1_1:hover{margin-top:10px}
+        .nav{width:1555px;height:260px;padding:0 0 0 336px;}
+    /*-----------------------第三层---------------------------------*/
+     ul{height:400px;width:1220px;padding:0 338px 0 338px;}
+        li {
+            width: 250px;
+            height: 400px;
+            float: left;
+            margin-left: 30px;
+            list-style:none;
+        }
+     .ul_img1,.ul_img2,.ul_img3,.ul_img4{height:275px;}
+     .ul_img1{background-image:url('Images/奖状1.jpg')}
+     .ul_img2{background-image:url('Images/奖状2.jpg')}
+     .ul_img3{background-image:url('Images/奖状3.jpg')}
+     .ul_img4{background-image:url('Images/奖状4.jpg')}
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style=" height: 1503px; width: 1895px;">
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+            &nbsp;&nbsp;
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>           
+        </div>
+        <p style=" text-align: center; font-size: 30px; margin: 50px 0 20px 0; font-family: 微软雅黑; ">我们提供的专业服务</p>
+       <div class="nav">
+           <div class="div1">
+               <div class="big">
+                  <div class="div1_1">
+                     <div class="image1" ></div>
+                     <p class="p1">在线招聘</p>
+                     <p class="p2">涵盖兼职、实习招聘500万人才,精准匹配快速招聘到岗</p>                 
+                  </div>
+               </div>
+            </div>
+           <div class="div1">
+               <div class="big">
+                  <div class="div1_1">
+                     <div class="image2" ></div>
+                     <p class="p1">众包任务</p>
+                     <p class="p2">助学社旗下项目众包平台,足不出户完成任务分包与结算</p>                 
+                  </div>
+               </div>
+            </div>
+           <div class="div1">
+               <div class="big">
+                  <div class="div1_1">
+                     <div class="image3" ></div>
+                     <p class="p1">品牌宣传</p>
+                     <p class="p2">包含义工志愿者、体验测评员等板块,为商家进行品牌和产品推广</p>                 
+                  </div>
+               </div>
+            </div>
+           <div class="div1">
+               <div class="big">
+                  <div class="div1_1">
+                     <div class="image4" ></div>
+                     <p class="p1">RPO招聘服务</p>
+                     <p class="p2">以客户需求为导向，以项目为建制，定制化招聘服务</p>                 
+                  </div>
+               </div>
+            </div>
+       </div>
+       <br />
+       <p style="text-align:center;font-size:30px;margin:50px 0 20px 0;color:white;line-height:50px; background-image: url('Images/联系方式.jpg');">联系方式：0571-56076688</p>
+       <p style="text-align:center;font-size:30px;margin:50px 0 20px 0; font-family: 微软雅黑;">我们获得的行业认可</p>
+       <ul>
+           <li>
+               <div class="ul_img1"></div>
+               <p class="p1">金塔奖</p>
+               <p class="p2">2016年度大学生喜爱的就业招聘平台</p>   
+           </li>
+           <li>
+               <div class="ul_img2"></div>
+               <p class="p1">年度创新力盛典</p>
+               <p class="p2">2016最佳创新模式奖</p>   
+           </li>
+           <li>
+               <div class="ul_img3"></div>
+               <p class="p1">沙利文</p>
+               <p class="p2">2018中国新经济卓越创新奖</p>   
+           </li>
+           <li>
+               <div class="ul_img4"></div>
+               <p class="p1">中国财经峰会</p>
+               <p class="p2">2018年度最具投资价值奖</p>   
+           </li>
+       </ul>
+
+    </form>
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.4.1.min.js"></script>
+    <script>
+    </script>
+</body>
+</html>
